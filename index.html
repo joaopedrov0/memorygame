@@ -12,6 +12,11 @@
         <h2>Lia - Epifania - A Falha Ancestral</h2>
     </header>
     <div class="starting">
+        <div class="startBtn" onclick="initialize()">Start</div>
+        
+        <select name="numberOfCards" id="numberOfCards-config" onchange="refreshConfig()">
+            <option value=""></option>
+        </select>
         <div class="score">Score: <span class="score-value">0</span></div>
     </div>
     <main>

@@ -1,137 +1,137 @@
 const characters = {
     Astaroth: {
         name: "Astaroth",
-        description: "",
+        description: "O Demônio Astaroth",
         token: "Astaroth.png"
     },
     Baltazar: {
         name: "Baltazar",
-        description: "",
+        description: "O Paladino",
         token: "Baltazar.png"
     },
     Cadman: {
         name: "Cadman",
-        description: "",
+        description: "Comerciante de Pípiltin",
         token: "Cadman.png"
     },
     Diego: {
         name: "Diego",
-        description: "",
+        description: "O Inventor da Azzip",
         token: "Diego.png"
     },
     Dorian: {
         name: "Dorian",
-        description: "",
+        description: "O Curandeiro de Pípiltin",
         token: "Dorian.png"
     },
     Hakon: {
-        name: "Baltazar",
-        description: "",
-        token: "Baltazar.png"
+        name: "Hakon",
+        description: "O Mestre Místico de Pípiltin",
+        token: "Hakon.png"
     },
     Henri: {
         name: "Henri",
-        description: "",
+        description: "O Braço direito de James",
         token: "Henri.png"
     },
     Irene: {
         name: "Irene",
-        description: "",
+        description: "A curandeira misteriosa",
         token: "Irene.png"
     },
     Isabelle: {
         name: "Isabelle",
-        description: "",
+        description: "A barda dracônica",
         token: "Isabelle.png"
     },
     Ivor: {
         name: "Ivor",
-        description: "",
+        description: "O mago de Piphet",
         token: "Ivor.png"
     },
     JackCooper: {
         name: "Jack Cooper",
-        description: "",
+        description: "O caçador de Yharnam",
         token: "Jack_Cooper.png"
     },
     James: {
         name: "James",
-        description: "",
+        description: "O capitão",
         token: "James.png"
     },
     Jane: {
         name: "Jane",
-        description: "",
+        description: "A pirata",
         token: "Jane.png"
     },
     Lina: {
         name: "Lina",
-        description: "",
+        description: "A ladina de ???",
         token: "Lina.png"
     },
     LordeDoSubmundo: {
         name: "Lorde do Submundo",
-        description: "",
+        description: "O Lorde do Submundo",
         token: "Lorde_do_submundo.png"
     },
     Lucas: {
         name: "Lucas",
-        description: "",
+        description: "O caçador de Pípiltin",
         token: "Lucas.png"
     },
     Magnus: {
         name: "Magnus",
-        description: "",
+        description: "O Rei de Urgressus",
         token: "Magnus.png"
     },
     Mary: {
         name: "Mary",
-        description: "",
+        description: "A pirata pistoleira",
         token: "Mary.png"
     },
     Matiza: {
         name: "Matiza",
-        description: "",
+        description: "O campeão da velha guarda",
         token: "Matiza.png"
     },
     Rebeca: {
         name: "Rebeca",
-        description: "",
+        description: "A feiticeira",
         token: "Rebeca.png"
     },
     Sabnock: {
         name: "Sabnock",
-        description: "",
+        description: "???",
         token: "Sabnock.png"
     },
     Spamton: {
         name: "Spamton",
-        description: "",
+        description: "O familiar de Jack Cooper",
         token: "Spamton.png"
     },
     Spike: {
         name: "Spike",
-        description: "",
+        description: "Demônio de Mictlan",
         token: "Spike.png"
     },
     Tyrion: {
         name: "Tyrion",
-        description: "",
+        description: "O encantador de Pípiltin",
         token: "Tyrion.png"
     },
     Willian: {
         name: "Willian",
-        description: "",
+        description: "O paladino misterioso",
         token: "Willian.png"
     },
     Yareth: {
         name: "Yareth",
-        description: "",
+        description: "O mago de sangue",
         token: "Yareth.png"
     },
     Zotikotita: {
         name: "Zotikotita",
-        description: "",
+        description: "A Entidade da Vida",
         token: "Zotikotita.png"
     }
 }
@@ -197,12 +197,14 @@ function fillGameArea(){
 }
 
 function initialize(){
+    clearAll()
     generateRandomGame()
     shuffle()
     fillGameArea()
+    
 }
 initialize()
-
+generateNumberSelectOptions()
 let flippedNumber = 0
 
 function selectCard(id){
@@ -245,8 +247,10 @@ function unflipAll(){
     `
     if (pair[0] == pair[1]){
         Game.collectedList.push(pair[0])
+        Game.score++
     }
 
+    renderScore()
     renderCollected()
     
     pair = []
@@ -260,8 +264,46 @@ function renderCollected(){
         collectedArea.innerHTML += `
         <div class="cardCollected">
             <div class="cardCollected-image" style="background-image: url('./img/${temp.token}');"></div>
-            <div class="cardCollected-text">${temp.name}<br>${temp.description}</div>
+            <div class="cardCollected-text">
+                <h3>${temp.name}</h3>
+                <h4>${temp.description}</h4>
+            </div>
         </div>
         `
     }
+}
+
+function renderScore(){
+    let score = document.querySelector('.score-value')
+    score.innerText = Game.score
+}
+
+function refreshConfig(){
+    let numberOfCards = document.querySelector("#numberOfCards-config")
+    console.log(numberOfCards)
+    Game.numberOfCards = numberOfCards.value
+
+}
+
+function generateNumberSelectOptions(){
+    let select = document.querySelector("#numberOfCards-config")
+    select.innerHTML = ''
+    for(i = 0; i < charList.length; i++){
+        if(i+1 == Game.numberOfCards){
+            select.innerHTML += `
+        <option value="${i+1}" selected>${i+1}</option>
+        `
+            continue
+        }
+        select.innerHTML += `
+        <option value="${i+1}">${i+1}</option>
+        `
+    }
+}
+function clearAll(){
+    let cardsArea = document.querySelector(".cardsArea")
+    let collectedArea = document.querySelector(".collectedArea")
+
+    cardsArea.innerHTML = ''
+    collectedArea.innerHTML = "Nothing yet"
 }

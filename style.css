@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
 
+ /* https://coolors.co/30011e-d7fcd4-b6cca1-b68f40-545454 */
 
 *{
     margin: 0;
@@ -15,10 +16,10 @@ body{
 
     font-family: "bitter";
 }
-
+/* 
 body * {
     background-color: rgba(0, 0, 0, 0.3);
-}
+} */
 
 header{
     display: flex;
@@ -26,14 +27,37 @@ header{
     justify-content: center;
     align-items: center;
     padding: 5px;
+    background-color: #30011e;
+}
+h1 {
+    
+    color: #B68F40;
+}
+h2{
+    
+    color: #B68F40;
 }
 
 .starting{
     width: 100vw;
-    height: 50vh;
+    height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #d7fcd4;
+}
+
+.starting > *{
+    background-color: #30011e;
+    border: 5px double #B68F40;
+    padding: 5px;
+    color: #B68F40;
+    height: 90%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
 }
 
 main{
@@ -41,12 +65,14 @@ main{
     flex-direction: row;
     width: 100vw;
     min-height: 100vh;
+    background-color: #B6CCA1;
+    
 }
 
 .playArea{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     width: 80vw;
     min-height: 100vh;
 }
@@ -56,7 +82,7 @@ main{
     min-height: 300px;
     display: grid;
     justify-content: space-evenly;
-    grid-template-columns: 300px 300px 300px;
+    grid-template-columns: 150px 150px 150px 150px 150px 150px;
     grid-auto-rows: 150px;
 }
 
@@ -67,18 +93,14 @@ main{
     justify-content: space-between;
     margin: 5px;
 
+    background-color: #30011E;
+    border: 5px solid #B68F40;
+
     transition: all 1s ease;
 
     /* transform: rotateY(180deg); */
     user-select: none;
 }
-/* .card::before{
-    content: '';
-    background-color: black;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-} */
 
 .card > *{
     display: flex;
@@ -99,11 +121,16 @@ main{
     margin: 5px;
     background-position: center center;
     background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .card .card-text{
     height: 30px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #B68F40;
+    text-align: center;
 }
+
 
 .card * {
     display: none;
@@ -128,6 +155,8 @@ main{
     display: flex;
     justify-content: center;
     flex-direction: column;
+    
+    color: #545454;
 }
 
 .flipped{
