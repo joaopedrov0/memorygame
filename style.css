@@ -36,6 +36,7 @@ h1 {
 h2{
     
     color: #B68F40;
+    text-align: center;
 }
 
 .starting{
@@ -179,4 +180,49 @@ main{
 
 .collectedArea{
     width: 100%;
+}
+
+.selectedArea > * {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 1200px){
+    main{
+        flex-direction: column-reverse;
+    }
+    .selectedArea{
+        flex-direction: row;
+        width: 100vw;
+        height: 200px;
+        min-height: 200px;
+    }
+    .last-area{
+        border-right: 1px solid #545454;
+        width: 20%;
+        
+    }
+    .collectedContainer{
+        width: 80%;
+    }
+    .collectedArea{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        overflow-x: scroll;
+    }
+    .cardsArea{
+        grid-template-columns: 23vw 23vw 23vw 23vw;
+        grid-auto-rows: 23vw;
+    }
+    .playArea{
+        width: 100vw;
+    }
+    .last{
+        flex-direction: column;
+    }
+    .last .card-image{
+        
+    }
 }
