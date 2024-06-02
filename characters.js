@@ -201,7 +201,7 @@ function initialize(){
     generateRandomGame()
     shuffle()
     fillGameArea()
-    
+    Game.collectedList = []
 }
 initialize()
 generateNumberSelectOptions()
