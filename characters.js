@@ -142,7 +142,7 @@ const characters = {
     Bellus: {
         name: "Bellus",
         description: "A máscara de Celestia",
-        token: "Bellus.png"
+        token: "Bellus.jpg"
     },
     Berriel: {
         name: "Berriel",
