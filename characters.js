@@ -267,7 +267,8 @@ const Game = {
     score: 0, // pontos acumulados por vitórias
     numberOfCards: 8,
     uncollectedList: [], // cartas em jogo, ainda não descobertas
-    collectedList: [] // cartas descobertas
+    collectedList: [], // cartas descobertas
+    misses: 0
 }
 
 for(character in characters){
@@ -373,8 +374,11 @@ function unflipAll(){
     if (pair[0] == pair[1]){
         Game.collectedList.push(pair[0])
         Game.score++
+    } else {
+        Game.misses++
     }
 
+    renderMisses()
     renderScore()
     renderCollected()
     
@@ -431,4 +435,10 @@ function clearAll(){
 
     cardsArea.innerHTML = ''
     collectedArea.innerHTML = "Nothing yet"
+}
+
+function renderMisses(){
+    let missesValue = document.querySelector(".misses-value")
+
+    missesValue.innerText = Game.misses
 }
