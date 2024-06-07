@@ -133,6 +133,131 @@ const characters = {
         name: "Zotikotita",
         description: "A Entidade da Vida",
         token: "Zotikotita.png"
+    },
+    Avna: {
+        name: "Avna",
+        description: "Os dez braços direitos do Lorde",
+        token: "Avna.png"
+    },
+    Bellus: {
+        name: "Bellus",
+        description: "A máscara de Celestia",
+        token: "Bellus.png"
+    },
+    Berriel: {
+        name: "Berriel",
+        description: "O demônio brincalhão",
+        token: "Berriel.png"
+    },
+    Boris: {
+        name: "Boris",
+        description: "O Capitão Brasil",
+        token: "Boris.png"
+    },
+    Luke: {
+        name: "Luke",
+        description: "O homem que não faz flexão, ele empurra a terra para baixo",
+        token: "Luke.png"
+    },
+    Maria: {
+        name: "Maria",
+        description: "A Ladina",
+        token: "Maria.png"
+    },
+    Niberius: {
+        name: "Niberius",
+        description: "O paladino da vingança",
+        token: "Pai_do_Arth.png"
+    },
+    RhannyGallahar: {
+        name: "Rhanny Gallahar",
+        description: "A prodígia de Pípiltin",
+        token: "Rhanny Gallahar.png"
+    },
+    Sif: {
+        name: "Sif",
+        description: "???",
+        token: "Sif.png"
+    },
+    Callan: {
+        name: "Callan",
+        description: "???",
+        token: "Callan.png"
+    },
+    Emma: {
+        name: "Emma",
+        description: "A Mestra Arcana de Metalurgis",
+        token: "Emma.png"
+    },
+    Volga: {
+        name: "Volga",
+        description: "O Rei dos Dragões",
+        token: "Volga.png"
+    },
+    Alduim: {
+        name: "Alduim",
+        description: "O Dragão Branco Ancião",
+        token: "Alduim.png"
+    },
+    Niti: {
+        name: "Niti",
+        description: "A Guardiã da Justiça",
+        token: "Niti.png"
+    },
+    Nayahath: {
+        name: "Nayahath",
+        description: "A Entidade do Arcanismo",
+        token: "Nayahath.png"
+    },
+    Kataha: {
+        name: "Kataha",
+        description: "A Mestra das Lâminas",
+        token: "Kataha.png"
+    },
+    Parvatam: {
+        name: "Parvatam",
+        description: "O Guardião das Montanhas",
+        token: "Parvatam.png"
+    },
+    Acalhueltecani: {
+        name: "Acalhueltecani",
+        description: "O Guia de Mictlan",
+        token: "Acalhueltecani.png"
+    },
+    Illidan: {
+        name: "Illidan",
+        description: "O Ladino Elfo",
+        token: "Illidan.png"
+    },
+    Tyrania: {
+        name: "Tyrania",
+        description: "O Demônio de Mictlan",
+        token: "Tyrania.png"
+    },
+    Laura: {
+        name: "Laura",
+        description: "A bibliotecária de Pípiltin",
+        token: "Laura.png"
+    },
+    Nosferato: {
+        name: "Nosferato",
+        description: "O alquimista de Pípiltin",
+        token: "Nosferato.png"
+    },
+    Syneidisis: {
+        name: "Syneídisis",
+        description: "O Ego",
+        token: "Syneídisis.png"
+    },
+    Joana: {
+        name: "Joana",
+        description: "A curandeira de Pípiltin",
+        token: "Joana.png"
+    },
+    Wallace: {
+        name: "Wallace",
+        description: "???",
+        token: "Wallace.png"
     }
 }
 
