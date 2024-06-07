@@ -147,7 +147,7 @@ const characters = {
     Berriel: {
         name: "Berriel",
         description: "O demônio brincalhão",
-        token: "Berriel.png"
+        token: "Berrial.png"
     },
     Boris: {
         name: "Boris",
