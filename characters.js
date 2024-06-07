@@ -226,7 +226,7 @@ const characters = {
     },
     Illidan: {
         name: "Illidan",
-        description: "O Ladino Elfo",
+        description: "O elfo que finalizou o Volga",
         token: "Illidan.png"
     },
     Tyrania: {
